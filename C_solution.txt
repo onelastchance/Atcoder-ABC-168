@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    double a,b,h,m;
+    cin>>a>>b>>h>>m;
+    m=m*6;
+    h=h*30;
+    h=h+(m/360)*30;
+    //cout<<h<<" "<<m<<'\n';
+    double n= abs(h-m);
+    double ans=a*a + b*b - 2*a*b*cos(n/ 57.295779513);
+    cout << fixed << setprecision(10) << sqrt(ans)<<'\n';
+    return 0;
+}
